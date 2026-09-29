@@ -1,63 +1,67 @@
 /* ==========================================
-   1. NHẬN XÉT (COMMENT OUT) KIỂU DÁNG LI CŨ
+   1. Skip to Main Content (Khả năng truy cập)
+   ========================================== */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: #ffffff;
+  padding: 8px 12px;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hiển thị liên kết khi dùng phím Tab chuyển tiêu điểm */
+.skip-link:focus {
+  top: 0;
+}
+
+/* ==========================================
+   2. Nhận xét (Comment out) kiểu dáng cũ cho li
    ========================================== */
 /* 
 li {
-    display: inline;
+  display: inline;
+  padding: 10px;
 } 
 */
 
 /* ==========================================
-   2. NÚT CHUYỂN ĐẾN NỘI DUNG CHÍNH (SKIP LINK)
-   ========================================== */
-.skip {
-    position: absolute;
-    top: -40px; /* Trốn khỏi màn hình khi bình thường */
-    left: 0;
-    background: #000000;
-    color: #ffffff;
-    padding: 8px;
-    z-index: 100;
-}
-
-.skip:focus {
-    top: 0; /* Hiện lên ở góc trên cùng khi nhấn phím Tab */
-}
-
-/* ==========================================
-   3. TẠO KIỂU CHO THANH ĐIỀU HƯỚNG (NAV)
+   3. Cấu hình thanh điều hướng Nav & Bố cục
    ========================================== */
 nav {
-    display: inline-block;
-    width: 80%;
+  display: inline-block;
+  width: 80%;
 }
 
-/* Bộ chọn hậu duệ: Chỉ tác động ảnh trong nav */
+/* Bộ chọn hậu duệ: Chỉ chỉnh sửa ảnh nằm trong nav */
 nav img {
-    width: 10%;
+  width: 10%;
 }
 
 /* ==========================================
-   4. TẠO KIỂU CHO LỚP LƯỚI (.GRID)
+   4. Cấu hình Lớp Grid (Lưới 2 cột)
    ========================================== */
 .grid {
-    display: grid;
-    grid-template-columns: 40% 40%; /* Lưới 2 cột, mỗi cột 40% */
-    justify-content: space-around; /* Căn đều khoảng cách ngang */
-    align-items: center;            /* Căn giữa theo chiều dọc */
-    row-gap: 20px;                 /* Khoảng cách giữa các hàng */
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-around; /* Căn đều không gian giữa/xung quanh các cột */
+  align-items: center;            /* Căn giữa theo chiều dọc */
+  row-gap: 20px;                 /* Khoảng cách giữa các hàng */
 }
 
-/* Bộ chọn hậu duệ: Chỉ tác động ảnh trong .grid */
+/* Bộ chọn hậu duệ: Chỉ áp dụng cho ảnh trong lớp grid */
 .grid img {
-    width: 100%;
+  width: 100%;
 }
 
 /* ==========================================
-   5. TẠO KIỂU CHO LỚP FLEX (.FLEX)
+   5. Cấu hình Lớp Flex
    ========================================== */
 .flex {
-    display: flex;
-    flex-wrap: wrap;               /* Cho phép xuống dòng khi hết chỗ */
-    justify-content: space-around; /* Căn đều các phần tử bên trong */
+  display: flex;
+  flex-wrap: wrap;               /* Tự động xuống hàng khi thiếu không gian */
+  justify-content: space-around; /* Căn đều không gian các phần tử flex */
 }
