@@ -1,0 +1,63 @@
+/* ==========================================
+   1. NHẬN XÉT (COMMENT OUT) KIỂU DÁNG LI CŨ
+   ========================================== */
+/* 
+li {
+    display: inline;
+} 
+*/
+
+/* ==========================================
+   2. NÚT CHUYỂN ĐẾN NỘI DUNG CHÍNH (SKIP LINK)
+   ========================================== */
+.skip {
+    position: absolute;
+    top: -40px; /* Trốn khỏi màn hình khi bình thường */
+    left: 0;
+    background: #000000;
+    color: #ffffff;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip:focus {
+    top: 0; /* Hiện lên ở góc trên cùng khi nhấn phím Tab */
+}
+
+/* ==========================================
+   3. TẠO KIỂU CHO THANH ĐIỀU HƯỚNG (NAV)
+   ========================================== */
+nav {
+    display: inline-block;
+    width: 80%;
+}
+
+/* Bộ chọn hậu duệ: Chỉ tác động ảnh trong nav */
+nav img {
+    width: 10%;
+}
+
+/* ==========================================
+   4. TẠO KIỂU CHO LỚP LƯỚI (.GRID)
+   ========================================== */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%; /* Lưới 2 cột, mỗi cột 40% */
+    justify-content: space-around; /* Căn đều khoảng cách ngang */
+    align-items: center;            /* Căn giữa theo chiều dọc */
+    row-gap: 20px;                 /* Khoảng cách giữa các hàng */
+}
+
+/* Bộ chọn hậu duệ: Chỉ tác động ảnh trong .grid */
+.grid img {
+    width: 100%;
+}
+
+/* ==========================================
+   5. TẠO KIỂU CHO LỚP FLEX (.FLEX)
+   ========================================== */
+.flex {
+    display: flex;
+    flex-wrap: wrap;               /* Cho phép xuống dòng khi hết chỗ */
+    justify-content: space-around; /* Căn đều các phần tử bên trong */
+}
